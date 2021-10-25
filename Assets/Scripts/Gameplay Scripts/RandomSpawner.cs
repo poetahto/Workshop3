@@ -8,7 +8,7 @@ public class RandomSpawner : MonoBehaviour
     
     private void Awake()
     {
-        for (int i = 0; i < amount; i++)
+        for (int i = 0; i < amount + Difficulty.Value; i++)
             SpawnPrefabAtRandomLocation();
     }
 

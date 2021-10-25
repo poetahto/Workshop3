@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinCondition : MonoBehaviour
 {
+    [SerializeField] private string mainMenuName;
+    
     private int _remainingCollectables;
     
     private void Start()
@@ -27,6 +30,6 @@ public class WinCondition : MonoBehaviour
         _remainingCollectables--;
 
         if (_remainingCollectables <= 0)
-            Debug.Log("You won the game!");
+            SceneManager.LoadScene(mainMenuName);
     }
 }
